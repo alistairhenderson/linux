@@ -19,3 +19,9 @@ Restart=on-failure
 [Install]
 WantedBy=default.target
 EOF
+
+
+systemctl daemon-reload
+systemctl start zookeeper
+systemctl enable zookeeper
+systemctl status zookeeper
