@@ -1,7 +1,7 @@
 zoopassword=$1
 zookeeperurl=$2
 
-apt upadate
+apt update
 apt -y upgrade
 
 apt install -y openjdk-11-jdk
