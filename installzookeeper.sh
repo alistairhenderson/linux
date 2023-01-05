@@ -1,10 +1,14 @@
 zoopassword=$1
 zookeeperurl=$2
 
-apt update && apt -y upgrade
-apt install -y openjdk-11-jdk 
+apt upadate
+apt -y upgrade
+
+apt install -y openjdk-11-jdk
+
+
 useradd zookeeper -m
-usermod --shell /bin/bash zookeeper 
+usermod --shell /bin/bash zookeeper
 
 echo zookeeper:$zoopassword | chpasswd
 
@@ -18,7 +22,7 @@ cd /opt/
 wget $zookeeperurl
 
 tar xvzf apache-zookeeper*.tar.gz
- 
+
 mv apache-zookeeper*bin apache-zookeeper
 
 chown -R zookeeper:zookeeper /opt/apache-zookeeper
@@ -34,3 +38,4 @@ EOF
 chown -R zookeeper:zookeeper /opt/apache-zookeeper
 
 cd /opt/apache-zookeeper
+bin/zkServer.sh start
