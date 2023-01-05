@@ -1,6 +1,7 @@
-zoopassword=$2
-zookeeperurl=$3
+zoopassword=$1
+zookeeperurl=$2
 
+apt update && apt -y upgrade
 apt install -y openjdk-11-jdk 
 useradd zookeeper -m
 usermod --shell /bin/bash zookeeper 
@@ -33,4 +34,3 @@ EOF
 chown -R zookeeper:zookeeper /opt/apache-zookeeper
 
 cd /opt/apache-zookeeper
-bin/zkServer.sh start
