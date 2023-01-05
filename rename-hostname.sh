@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 hotsname=$1
 tee /etc/hostnames <<EOF
 $hostname 
