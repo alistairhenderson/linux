@@ -1,3 +1,8 @@
+rm -r -f /opt/zookeeper/data/version-2
+rm -r -f /opt/zookeeper/data/*
+chown -R zookeeper:zookeeper /opt/apache-zookeeper
+
+
 tee /etc/systemd/system/zookeeper.service << EOF
 [Unit]
 Description=Zookeeper Daemon
