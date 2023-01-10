@@ -29,7 +29,14 @@ export DRILL_SITE=/opt/drill-site
 export DRILL_HOME=/opt/drill
 
 
+# NEED THE conf file
 
-sudo cp $DRILL_HOME/conf/drill-override-example.conf $DRILL_SITE/drill-override.conf
-sudo cp $DRILL_HOME/conf/drill-on-yarn-example.conf $DRILL_SITE/drill-on-yarn.conf
+
+
 sudo cp $DRILL_HOME/conf/drill-env.sh $DRILL_SITE
+
+
+
+
+
+
